@@ -21,7 +21,15 @@
     "lib": [
       "ES2022",
       "dom"
-    ]
+    ],
+    "paths": {
+    //  "@shared/*": [
+    //   "./src/app/domains/shared/*"
+
+    //   ]
+    // otra forma de tener todos los dominios de forma automatica
+        "@/*":["./src/app/domains/*"]
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
