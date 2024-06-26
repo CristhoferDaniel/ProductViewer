@@ -35,6 +35,7 @@ export default class ListComponent {
   private getProducts() {
     this.productsService.getProducts(this.category_id).subscribe({
       next: (products) => {
+        console.log('products =>', products);
         this.products.set(products);
       },
       error: (error) => {
