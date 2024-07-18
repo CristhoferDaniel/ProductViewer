@@ -30,7 +30,6 @@ export default class ListComponent {
   }
   ngOnChanges(changes:SimpleChanges) {
     this.getProducts();
-
   }
   private getProducts() {
     this.productsService.getProducts(this.category_id).subscribe({

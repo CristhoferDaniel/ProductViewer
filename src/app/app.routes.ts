@@ -6,9 +6,10 @@ import { NotFoundComponent } from '@/info/pages/not-found/not-found.component';
 export const routes: Routes = [
   {
     path: '',
-    loadComponent: () => import('./domains/shared/components/layout/layout.component'),
+    loadComponent: () =>
+      import('./domains/shared/components/layout/layout.component'),
 
-    loadChildren:()=> [
+    loadChildren: () => [
       {
         path: '',
         loadComponent: () =>
@@ -25,6 +26,11 @@ export const routes: Routes = [
           import(
             './domains/products/pages/product-detail/product-detail.component'
           ),
+      },
+      {
+        path: 'user',
+        loadComponent: () =>
+          import('./domains/users/pages/list/list.component'),
       },
     ],
   },

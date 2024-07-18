@@ -27,8 +27,6 @@ export class SanitizeImageUrlPipe implements PipeTransform {
          'https://via.placeholder.com/640x480?text=No+Image'
        );
     }
-
-    // Si imageUrl contiene caracteres escapados como &quot;, reemplázalos con comillas dobles
     imageUrl = imageUrl.replace(/&quot;/g, '"');
     imageUrl = imageUrl.replace("[", '');
     imageUrl = imageUrl.replace("]", '');

@@ -20,7 +20,6 @@ export class ProductComponent {
 
   addToCartHandler() {
     //console.log('add');
-
     this.addToCart.emit(this.Product);
   }
 }

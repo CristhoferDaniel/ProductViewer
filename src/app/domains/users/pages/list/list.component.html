@@ -1,0 +1,13 @@
+
+<app-modal  [showModal]="showModal"></app-modal>
+
+
+
+  <div class="grid grid-cols-4  gap-8">
+@for (user of users(); track $index) {
+
+ <app-user [User]="user" (isVaLidEmail)="isValid($event)"/>
+
+
+}
+ </div>

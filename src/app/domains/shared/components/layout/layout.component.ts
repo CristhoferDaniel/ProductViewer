@@ -6,7 +6,6 @@ import { HeaderComponent } from '@/shared/components/header/header.component';
   standalone: true,
   imports: [HeaderComponent,RouterModule],
   templateUrl: './layout.component.html',
-  styleUrl: './layout.component.css'
 })
 export default class LayoutComponent {
 

@@ -3,13 +3,13 @@ import { Component, Input, SimpleChanges, inject, signal } from '@angular/core';
 import { CurrencyPipe } from '@angular/common';
 import { CartService } from '@/shared/services/cart.service';
 import { RouterLinkWithHref , RouterLinkActive} from '@angular/router';
+import { SanitizeImageUrlPipe } from '@/shared/pipes/sanitize-image-url.pipe';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CurrencyPipe, RouterLinkWithHref, RouterLinkActive],
+  imports: [CurrencyPipe, RouterLinkWithHref, RouterLinkActive , SanitizeImageUrlPipe],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.css',
 })
 export class HeaderComponent {
   hideSideMenu = signal(true);
@@ -32,6 +32,8 @@ export class HeaderComponent {
   // }
 
   toogleSideMenu() {
+    console.log('toogleSideMenu');
+
     this.hideSideMenu.update((prevState) => !prevState);
   }
 }
